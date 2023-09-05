@@ -1,5 +1,5 @@
 ## Laravel application
-une application de gestion d'étudiants 
+une application de gestion des étudiants 
 
 ## 3 packages laravel à installer 
 
