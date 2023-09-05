@@ -26,6 +26,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::prefix('student-cards')
+    ->as('student-cards.')
+    ->group(static function(): void{
+        Route::get('/create', \App\Http\Controllers\StudentCard\CrateController::class)->name('create');
+        Route::get('/', \App\Http\Controllers\StudentCard\StoreController::class)->name('store');
+
+    });
+
+
 });
 
 require __DIR__.'/auth.php';
