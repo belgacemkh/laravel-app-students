@@ -18,3 +18,5 @@ Pest est un Framework de Test PHP basé sur PHPUNIT. Il permet une écriture plu
 
 `composer require pestphp/pest --dev --with-all-dependencies`
 
+# Laravel breeze
+`composer require laravel/breeze --dev`
