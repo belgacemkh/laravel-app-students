@@ -3,12 +3,12 @@ une application de gestion d'étudiants
 
 ## 3 packages laravel à installer 
 
-# laravel pint
+# Laravel Pint
 Pint est une surcouche "dogmatique" d'un robuste package d'analyse et de correction automatique de code : FriendsOfPHP/PHP-CS-Fixer.
 
 `composer require laravel/pint --dev`
 
-# laraston
+# Laraston
 Larastan est un package d'analyse statique pour Laravel, basé sur PHPStan. Il permet de détecter les erreurs de code et les problèmes potentiels avant l'exécution du programme.
 
 `composer require --dev nunomaduro/larastan`
