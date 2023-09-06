@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     ->as('student-cards.')
     ->group(static function(): void{
         Route::get('/create', \App\Http\Controllers\StudentCard\CrateController::class)->name('create');
-        Route::get('/', \App\Http\Controllers\StudentCard\StoreController::class)->name('store');
+        Route::post('/', \App\Http\Controllers\StudentCard\StoreController::class)->name('store');
 
     });
 
