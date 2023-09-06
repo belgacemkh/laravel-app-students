@@ -65,14 +65,14 @@
                 </div>
 
                 <div>
-                    <x-input-label for="date_of_birth" :value="__('Date de naissance')" />
+                    <x-input-label for="dat_of_birth" :value="__('Date de naissance')" />
                     <input
                         type="date"
-                        name="date_of_birth"
-                        id="date_of_birth"
-                        value="{{ old('date_of_birth') }}"
+                        name="dat_of_birth"
+                        id="dat_of_birth"
+                        value="{{ old('dat_of_birth') }}"
                     />
-                    <x-input-error :messages="$errors->get('date_of_birth')" class="mt-2" />
+                    <x-input-error :messages="$errors->get('dat_of_birth')" class="mt-2" />
                 </div>
 
                 <div class="flex items-center justify-end mt-4">

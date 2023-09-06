@@ -12,6 +12,15 @@ class StudentCard extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'school',
+        'description',
+        'is_internal',
+        'dat_of_birth',
+
+    ];
+
     protected $casts = [
 
         'school' => SchoolEnum::class,
