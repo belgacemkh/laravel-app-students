@@ -9,11 +9,9 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\View\View;
 
-
 class CrateController extends Controller
 {
-   
-    public function __invoke() : View
+    public function __invoke(): View
     {
         return view('student_cards.create', [
             'users' => User::whereNot('id', auth()->id())->get(),
