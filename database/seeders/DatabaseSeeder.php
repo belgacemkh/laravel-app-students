@@ -12,17 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         \App\Models\User::factory(9)->create();
+        \App\Models\User::factory(9)->create();
 
-         \App\Models\User::factory()->create([
-             'name' => 'Super Admin',
+        \App\Models\User::factory()->create([
+            'name' => 'Super Admin',
             'email' => 'admin@test.com',
-         ]);
+        ]);
 
-         \App\Models\User::factory(9)
-         ->has(
-            \App\Models\StudentCard::factory(),
-         )
-         ->create();
+        \App\Models\User::factory(9)
+            ->has(
+                \App\Models\StudentCard::factory(),
+            )
+            ->create();
     }
 }

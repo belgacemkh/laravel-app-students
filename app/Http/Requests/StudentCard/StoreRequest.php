@@ -8,7 +8,6 @@ use App\Enums\SchoolEnum;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Enum;
 
-
 class StoreRequest extends FormRequest
 {
     /**
@@ -22,35 +21,36 @@ class StoreRequest extends FormRequest
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<int, string|Enum>|string>
      */
     public function rules(): array
     {
         return [
             'user_id' => [
                 'required',
-                'exists:users,id', 
+                'exists:users,id',
             ],
             'school' => [
+                'required',
                 new Enum(
                     type: SchoolEnum::class,
-                )
-                ],
-                'description' => [
-                    'nullable',
-                    'min:10',
-                    'max:700'
-                ],
-                'is_internal' => [
-                    'required',
-                    'boolean'
-                ],
-                'dat_of_birth' => [
-                    'required',
-                    'date_format:Y-m-d',
-                    'before:-11 years',
-                    'after:-50 years',
-                ],
+                ),
+            ],
+            'description' => [
+                'nullable',
+                'min:10',
+                'max:700',
+            ],
+            'is_internal' => [
+                'required',
+                'boolean',
+            ],
+            'dat_of_birth' => [
+                'required',
+                'date_format:Y-m-d',
+                'before:-11 years',
+                'after:-50 years',
+            ],
         ];
     }
 

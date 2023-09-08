@@ -28,13 +28,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::prefix('student-cards')
-    ->as('student-cards.')
-    ->group(static function(): void{
-        Route::get('/create', \App\Http\Controllers\StudentCard\CrateController::class)->name('create');
-        Route::post('/', \App\Http\Controllers\StudentCard\StoreController::class)->name('store');
+        ->as('student-cards.')
+        ->group(static function (): void {
+            Route::get('/create', \App\Http\Controllers\StudentCard\CrateController::class)->name('create');
+            Route::post('/', \App\Http\Controllers\StudentCard\StoreController::class)->name('store');
 
-    });
-
+        });
 
 });
 

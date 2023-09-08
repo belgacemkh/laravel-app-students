@@ -19,11 +19,11 @@ class StudentCardFactory extends Factory
     public function definition(): array
     {
         return [
-           'school' => fake()->randomElement(SchoolEnum::cases()),
-           'description' => fake()->text,
-           'is_internal' => fake()->boolean,
-           'user_id' => User::factory(),
-           'dat_of_birth' => fake()->dateTimeBetween('-50 years', '-11 years')->format('Y-m-d'),
+            'school' => fake()->randomElement(SchoolEnum::cases()),
+            'description' => fake()->text,
+            'is_internal' => fake()->boolean,
+            'user_id' => User::factory(),
+            'dat_of_birth' => fake()->dateTimeBetween('-50 years', '-11 years')->format('Y-m-d'),
         ];
     }
 }
